@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IOS_Swift_UICollectionViewDynamicCustom" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SSq-JY-VU6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P0j-Ug-7fj">
+                                    <size key="itemSize" width="221" height="198"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="dir-u0-LzI" customClass="CollectionViewCell" customModule="IOS_Swift_UICollectionViewDynamicCustom" customModuleProvider="target">
+                                        <rect key="frame" x="77" y="0.0" width="221" height="198"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="221" height="198"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e3M-LW-UYb">
+                                                    <rect key="frame" x="5" y="5" width="99" height="99"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="e3M-LW-UYb" secondAttribute="height" multiplier="1:1" id="DyX-bL-ieE"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kft-UQ-hfN">
+                                                    <rect key="frame" x="114" y="71.5" width="102" height="59.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uea-Zp-jZh">
+                                                    <rect key="frame" x="0.0" y="136" width="201" height="79"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="UxP-me-c0X">
+                                                    <rect key="frame" x="120" y="5" width="96" height="40"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LZ-8r-l0E">
+                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="gez-cH-VYh"/>
+                                                                <constraint firstAttribute="width" constant="40" id="q5j-Id-E4p"/>
+                                                            </constraints>
+                                                            <state key="normal" title="E" image="icons8-edit-column-50"/>
+                                                            <connections>
+                                                                <action selector="editBtn:" destination="dir-u0-LzI" eventType="touchDown" id="WYY-Wu-0n4"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmI-Uh-R9e">
+                                                            <rect key="frame" x="56" y="0.0" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="BJq-Qn-dzr"/>
+                                                                <constraint firstAttribute="width" constant="40" id="Byr-8b-Yoz"/>
+                                                            </constraints>
+                                                            <state key="normal" title="D" image="icons8-trash-50"/>
+                                                            <connections>
+                                                                <action selector="deleteBtn:" destination="dir-u0-LzI" eventType="touchDown" id="AQX-ks-BTZ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="uea-Zp-jZh" firstAttribute="top" secondItem="Kft-UQ-hfN" secondAttribute="bottom" constant="5" id="19I-5z-Zmi"/>
+                                            <constraint firstItem="UxP-me-c0X" firstAttribute="top" secondItem="dir-u0-LzI" secondAttribute="top" constant="5" id="33f-cx-MzE"/>
+                                            <constraint firstItem="e3M-LW-UYb" firstAttribute="leading" secondItem="dir-u0-LzI" secondAttribute="leadingMargin" constant="2" id="3SY-mQ-hT3"/>
+                                            <constraint firstItem="uea-Zp-jZh" firstAttribute="height" secondItem="dir-u0-LzI" secondAttribute="height" multiplier="0.4" id="4BM-da-2iP"/>
+                                            <constraint firstItem="e3M-LW-UYb" firstAttribute="height" secondItem="dir-u0-LzI" secondAttribute="height" multiplier="0.5" id="5fE-kv-vkM"/>
+                                            <constraint firstItem="e3M-LW-UYb" firstAttribute="top" secondItem="dir-u0-LzI" secondAttribute="topMargin" constant="5" id="6lt-Fe-ytH"/>
+                                            <constraint firstItem="uea-Zp-jZh" firstAttribute="leading" secondItem="dir-u0-LzI" secondAttribute="leadingMargin" constant="2" id="OW2-Il-ICU"/>
+                                            <constraint firstItem="Kft-UQ-hfN" firstAttribute="leading" secondItem="e3M-LW-UYb" secondAttribute="trailing" constant="5" id="TvR-DM-heX"/>
+                                            <constraint firstItem="Kft-UQ-hfN" firstAttribute="height" secondItem="dir-u0-LzI" secondAttribute="height" multiplier="0.3" id="c0S-jx-zEH"/>
+                                            <constraint firstAttribute="trailing" secondItem="UxP-me-c0X" secondAttribute="trailing" constant="5" id="dcL-KD-lmS"/>
+                                            <constraint firstItem="uea-Zp-jZh" firstAttribute="top" secondItem="e3M-LW-UYb" secondAttribute="bottom" constant="4" id="gJX-Vm-hFd"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="uea-Zp-jZh" secondAttribute="bottom" constant="2" id="rXi-s6-l3K"/>
+                                            <constraint firstAttribute="trailing" secondItem="Kft-UQ-hfN" secondAttribute="trailing" constant="5" id="u2q-Ri-Qfs"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="uea-Zp-jZh" secondAttribute="trailing" constant="2" id="z9L-Nn-WlS"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="editImg" destination="3LZ-8r-l0E" id="9xE-sK-y5G"/>
+                                            <outlet property="imageCell" destination="e3M-LW-UYb" id="seH-Ai-5Lu"/>
+                                            <outlet property="labelDetails" destination="uea-Zp-jZh" id="Ngr-Y9-BDk"/>
+                                            <outlet property="labelTitle" destination="Kft-UQ-hfN" id="jcd-sT-bKz"/>
+                                            <outlet property="trashImg" destination="FmI-Uh-R9e" id="B0V-FH-oij"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="CTQ-vO-8LP"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="e4N-Gg-tO8"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SSq-JY-VU6" secondAttribute="trailing" id="CKF-IH-zJR"/>
+                            <constraint firstItem="SSq-JY-VU6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ZLI-eY-dH0"/>
+                            <constraint firstItem="SSq-JY-VU6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cYD-nb-MSQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SSq-JY-VU6" secondAttribute="bottom" id="ufN-KF-ioR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="SSq-JY-VU6" id="RZp-dO-Jib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-edit-column-50" width="50" height="50"/>
+        <image name="icons8-trash-50" width="50" height="50"/>
+    </resources>
+</document>
